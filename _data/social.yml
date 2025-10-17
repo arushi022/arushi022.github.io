@@ -1,0 +1,40 @@
+# core social
+
+- type: email
+  id: 
+  star: true
+  note: 
+  icon: <i class="fas fa-envelope"></i>
+  url: mailto:arushi.mail16@gmail.com
+
+- type: twitter
+  id: 
+  star: true
+  note:
+  icon: <i class="fab fa-twitter"></i>
+  url: "https://x.com/ASrivas06997693"
+
+- type: github
+  id: 
+  star: true
+  note:
+  icon: <i class="fab fa-github"></i>
+  url: "https://github.com/arushi022"
+
+- type: youtube
+  id: 
+  star: true
+  icon: <i class="fab fa-youtube"></i>
+  url: "https://www.youtube.com/@asrivastava9229"
+
+- type: spotify
+  id: 
+  star: true
+  icon: <i class="fab fa-spotify"></i>
+  url: "https://open.spotify.com/user/arushi_02?si=af976da17d914e11"
+
+- type: linkedin
+  id: 
+  star: true
+  icon: <i class="fab fa-linkedin"></i>
+  url: "https://www.linkedin.com/in/arushisrivastava0"

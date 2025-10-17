@@ -1,0 +1,47 @@
+/*******************************************************************************
+ * Variables used throughout the theme.
+ * To adjust anything, simply edit the variables below and rebuild the theme.
+ ******************************************************************************/
+
+
+// Colors
+$red-color:           #FF3636 !default;
+$red-color-dark:      #B71C1C !default;
+$orange-color:        #F29105 !default;
+$blue-color:          #0076df !default;
+$blue-color-dark:     #00369f !default;
+$cyan-color:          #2698BA !default;
+$light-cyan-color:    lighten($cyan-color, 25%);
+$green-color:         #00ab37 !default;
+$green-color-lime:    #B7D12A !default;
+$green-color-dark:    #2E8B57 !default;
+$green-color-light:   #ddffdd !default;
+$green-color-bright:  #11D68B !default;
+$purple-color:        #B509AC !default;
+$light-purple-color:  lighten($purple-color, 25%);
+$pink-color:          #f92080 !default;
+$pink-color-light:    #ffdddd !default;
+$yellow-color:        #FFB300 !default;
+$taupe-color:         #C5A572 !default; 
+
+$grey-color:          #828282 !default;
+$grey-color-light:    lighten($grey-color, 40%);
+$grey-color-dark:     #1C1C1D;
+$grey-900:            #212529;
+
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
+
+
+// Theme colors
+
+$code-bg-color-light:     rgba($taupe-color, 0.05);
+$code-bg-color-dark:      #2c3237 !default;
+
+
+// Typography sizes
+
+$font-size-base: 16px !default;   // body / paragraph size
+$font-size-scale-h1: 2.25rem !default; // H1 size
+$font-size-scale-h2: 1.75rem !default;
+$font-size-scale-h3: 1.375rem !default;
