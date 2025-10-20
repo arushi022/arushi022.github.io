@@ -36,10 +36,11 @@ table {
   }
 }
 
+// Main bio page and hover after for social icons 
 a, table.table a {
   color: var(--global-theme-color);
   &:hover {
-    color: var(--global-theme-color);
+    color: var(--global-link-hover-color);
     text-decoration: underline;
   }
   &:hover:after :not(.nav-item.dropdown) {
@@ -151,6 +152,24 @@ blockquote {
 
 // Navbar customization
 
+.navbar-brand.title,
+.post-title {
+  position: relative;
+  display: inline-block;
+}
+.navbar-brand.title::after,
+.post-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 3px;
+  background-color: var(--global-theme-color);
+  border-radius: 2px; 
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
@@ -164,16 +183,17 @@ blockquote {
     color: var(--global-text-color);
   }
   a:hover {
-    color: var(--global-hover-color);
+    color: var(--global-test-color);
   }
   .dropdown-divider {
     border-top: 1px solid var(--global-divider-color) !important;
   }
 }
+// Other pages
 .dropdown-item {
   color: var(--global-text-color);
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-link-hover-color);
       background-color: var(--global-bg-color);
     }
 }
@@ -186,18 +206,20 @@ blockquote {
   .navbar-brand {
     color: var(--global-text-color);
   }
+  // Blog/work/life hover
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-link-hover-color);
     }
   }
+  // Unsure
   .navbar-nav .nav-item.active>.nav-link {
       background-color: inherit;
       font-weight: bolder;
       color: var(--global-theme-color);
       &:hover {
-        color: var(--global-hover-color);
+        color: var(--global-link-hover-color);
       }
   }
   .navbar-brand.social {
@@ -209,9 +231,10 @@ blockquote {
         color: var(--global-text-color);
         transition-property: all 0.2s ease-in-out;
       }
+      // Unsure
       &:hover {
         i::before {
-          color: var(--global-theme-color);
+          color: var(--global-link-hover-color);
         }
       }
     }
@@ -253,13 +276,14 @@ blockquote {
   }
 }
 
+// Light/Dark Toggle Button
 #light-toggle {
   padding: 0;
   border: 0;
   background-color: inherit;
   color: var(--global-text-color);
   &:hover {
-    color: var(--global-hover-color);
+    color: var(--global-theme-color);
   }
 }
 
@@ -285,8 +309,9 @@ blockquote {
       }
 
       &:hover {
-        svg { stroke: var(--global-theme-color); transform: translateY(-1px); }
-        i, i::before { color: var(--global-theme-color); transform: translateY(-1px); }
+        // Social icon hover color
+        svg { stroke: var(--global-link-hover-color); transform: translateY(-1px); }
+        i, i::before { color: var(--global-link-hover-color); transform: translateY(-1px); }
       }
     }
   }
