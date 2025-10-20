@@ -22,6 +22,7 @@ $light-purple-color:  lighten($purple-color, 25%);
 $pink-color:          #f92080 !default;
 $pink-color-light:    #ffdddd !default;
 $yellow-color:        #FFB300 !default;
+$yellow-hover-color:  #E69A00 !default;
 $taupe-color:         #C5A572 !default; 
 
 $grey-color:          #828282 !default;
@@ -35,7 +36,7 @@ $black-color: #000000 !default;
 
 // Theme colors
 
-$code-bg-color-light:     rgba($taupe-color, 0.05);
+$code-bg-color-light:     rgba($yellow-color, 0.05);
 $code-bg-color-dark:      #2c3237 !default;
 
 

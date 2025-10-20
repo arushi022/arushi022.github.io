@@ -4,37 +4,43 @@
   id: 
   star: true
   note: 
-  icon: <i class="fas fa-envelope"></i>
+  # OPTION 1
+  icon: <i data-feather="mail"></i>
   url: mailto:arushi.mail16@gmail.com
+
+- type: linkedin
+  id: 
+  star: true
+  # OPTION 1
+  icon: <i data-feather="linkedin"></i>
+  url: "https://www.linkedin.com/in/arushisrivastava0"
 
 - type: twitter
   id: 
   star: true
   note:
-  icon: <i class="fab fa-twitter"></i>
+  # OPTION 1
+  icon: <i data-feather="twitter"></i>
   url: "https://x.com/ASrivas06997693"
 
 - type: github
   id: 
   star: true
   note:
-  icon: <i class="fab fa-github"></i>
+  # OPTION 1
+  icon: <i data-feather="github"></i>
   url: "https://github.com/arushi022"
 
 - type: youtube
   id: 
   star: true
-  icon: <i class="fab fa-youtube"></i>
+  # OPTION 1
+  icon: <i data-feather="youtube"></i>
   url: "https://www.youtube.com/@asrivastava9229"
 
-- type: spotify
-  id: 
-  star: true
-  icon: <i class="fab fa-spotify"></i>
-  url: "https://open.spotify.com/user/arushi_02?si=af976da17d914e11"
-
-- type: linkedin
-  id: 
-  star: true
-  icon: <i class="fab fa-linkedin"></i>
-  url: "https://www.linkedin.com/in/arushisrivastava0"
+# - type: spotify
+#   id: 
+#   star: true
+#   # OPTION 2
+#   icon: <i class="fab fa-spotify"></i>
+#   url: "https://open.spotify.com/user/arushi_02?si=af976da17d914e11"

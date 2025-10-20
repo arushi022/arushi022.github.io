@@ -8,9 +8,15 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@{{ site.fontawesome.version }}/css/all.min.css" integrity="{{ site.fontawesome.integrity }}" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@{{ site.academicons.version }}/css/academicons.min.css" integrity="{{ site.academicons.integrity }}" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,700|Inter+Slab:100,300,400,500,700|Material+Icons"> -->
-    <!-- <link type="text/css" rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300&display=swap"> -->
+    <!-- Satoshi -->
     <link rel="stylesheet" type="text/css" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400&display=swap">
+    <!-- Feather icons (light outlined SVGs) OPTION 1 -->
+    <script defer src="https://unpkg.com/feather-icons"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.feather) feather.replace({ 'stroke-width': 1.6 });
+        });
+    </script>
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_light | append: '.css' }}" media="" id="highlight_theme_light" />
