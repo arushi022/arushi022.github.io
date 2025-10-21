@@ -117,6 +117,9 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
+  current:
+    output: true
+    permalink: /current/:path/
   projects:
     output: true
     permalink: /projects/:path/
