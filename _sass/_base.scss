@@ -60,6 +60,67 @@ blockquote {
   font-size: 1.2rem;
 }
 
+// Current favorites
+.current {
+  margin-top: 2.5rem;
+}
+.current h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--global-text-color);
+}
+.favorites-grid a.favorite-item,
+.favorites-grid .favorite-item {
+  display: block;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  transition: transform 0.22s ease, border-color 0.22 ease;
+  color: inherit;
+  text-decoration: none;
+}
+.favorites-grid a.favorite-item:hover,
+a.favorites-grid .favorite-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--global-theme-color);
+}
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.favorite-item {
+  background-color: var(--global-card-bg-color); /* fffaf2 */
+  border: 1px solid var(--global-divider-color); /* f2e6d9 */
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  transition: all 0.25s ease;
+}
+.favorite-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--global-theme-color);
+}
+.favorite-item h4 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--global-theme-color);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.01rem;
+  position: relative;
+}
+.favorite-item p {
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+  line-height: 1.4;
+  margin: 0;
+}
+
 // Math
 
 .equation {

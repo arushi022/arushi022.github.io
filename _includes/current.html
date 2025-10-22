@@ -1,0 +1,38 @@
+        <div class="current">
+            <h2>Current Favorites:</h2>
+            <div class="favorites-grid">
+                {%- if page.current_items -%}
+                    {%- for item in page.current_items -%}
+                        {%- if item.url -%}  
+                            <a class="favorite-item" href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ item.title }}"></a>
+                                <h4>{{ item.title }}</h4>
+                                <p>{{ item.body | markdownify }}</p>
+                            </a>
+                        {%- else -%}
+                            <div class="favorite-item">
+                                <h4>{{ item.title }}</h4>
+                                <p>{{ item.body | markdownify }}</p>
+                            </div>
+                        {%- endif -%}
+                    {%- endfor -%}
+                {%- else -%}
+                    <div class="favorite-item">
+                        <h4>Reading:</h4>
+                        <p>Saint Anything<br>by Sarah Dessen</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h4>Listening to:</h4>
+                        <p>Humans of Bombay Podcast</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h4>In the works:</h4>
+                        <p>Predicting the next big signal in the wellness markets</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h4>Cooking experiments:</h4>
+                        <p>Mango rasmalai cake for Diwali</p>
+                    </div>
+                {%- endif -%}
+                <!-- would like to insert image -->
+            </div>
+        </div>
