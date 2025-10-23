@@ -4,7 +4,7 @@
                 {%- if page.current_items -%}
                     {%- for item in page.current_items -%}
                         {%- if item.url -%}  
-                            <a class="favorite-item" href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ item.title }}"></a>
+                            <a class="favorite-item" href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ item.title }}">
                                 <h4>{{ item.title }}</h4>
                                 <p>{{ item.body | markdownify }}</p>
                             </a>

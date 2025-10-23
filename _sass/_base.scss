@@ -62,7 +62,9 @@ blockquote {
 
 // Current favorites
 .current {
-  margin-top: 2.5rem;
+  margin-top: 20px;
+  padding-top: 40px;
+  border-top: 1px solid var(--global-divider-color);
 }
 .current h2 {
   font-size: 1.35rem;
@@ -86,7 +88,7 @@ blockquote {
 .favorites-grid a.favorite-item:hover,
 a.favorites-grid .favorite-item:hover {
   transform: translateY(-2px);
-  border-color: var(--global-theme-color);
+  border-color: var(--global-link-hover-color);
 }
 .favorites-grid {
   display: grid;
@@ -99,12 +101,12 @@ a.favorites-grid .favorite-item:hover {
   padding: 0.9rem 1rem;
   border-radius: 0.75rem;
   text-align: left;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   transition: all 0.25s ease;
 }
 .favorite-item:hover {
   transform: translateY(-2px);
-  border-color: var(--global-theme-color);
+  border-color: var(--global-link-hover-color);
 }
 .favorite-item h4 {
   font-weight: 500;
@@ -238,7 +240,7 @@ a.favorites-grid .favorite-item:hover {
   right: 0;
   bottom: -6px;
   height: 2px;
-  background-color: var(--global-theme-color);
+  background-color: var(--global-link-hover-color);
   border-radius: 2px; 
   pointer-events: none;
   transform-origin: left center;
@@ -374,7 +376,7 @@ a.favorites-grid .favorite-item:hover {
   background-color: inherit;
   color: var(--global-text-color);
   &:hover {
-    color: var(--global-theme-color);
+    color: var(--global-link-hover-color);
   }
 }
 
@@ -432,8 +434,8 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px dashed var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 0.9rem;
 }
 
