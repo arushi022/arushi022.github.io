@@ -42,6 +42,17 @@
                 {% endif %}
               {% endfor %}
 
+              {% if site.about_me_nav_title %}
+              <!-- About me -->
+              <li class="nav-item {% if page.url contains 'about_me' %}active{% endif %}">
+                <a class="nav-link" href="{{ '/about_me/' | relative_url }}">{{ site.about_me_nav_title }}
+                  {%- if page.url contains 'about_me' -%}
+                  <span class="sr-only">(current)</span>
+                  {%- endif -%}
+                </a>
+              </li>
+              {%- endif %}
+
               {% if site.blog_nav_title %}
               <!-- Blog -->
               <li class="nav-item {% if page.url contains 'blog' %}active{% endif %}">

@@ -84,6 +84,15 @@ google_site_verification: # your google-site-verification ID (Google Search Cons
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
+# About me
+# -----------------------------------------------------------------------------
+
+about_me_name: About Me # blog_name will be displayed in your blog page
+about_me_nav_title: about me # your blog must have a title for it to be displayed in the nav bar
+about_me_description:
+permalink: /about_me/
+
+# -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
 
