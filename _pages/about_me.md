@@ -4,9 +4,10 @@ title: about me
 nav: false
 dropdown: false
 permalink: /about_me/
+introduction: true
 subtitle:
 ---
 
-{% assign intro = site.bio | where: "introduction", true | first %}
+{% include resume.html %}
 
 {{ intro.content | markdown | remove: '<p>' | remove: '</p>' }}

@@ -1,0 +1,50 @@
+<section class="resume-section">
+  <h2>Experience</h2>
+  {% for e in site.data.resume.experience %}
+    <div class="card">
+      <h3 class="card-title">{{ e.title }} — {{ e.org }} <small>{{ e.date }}</small></h3>
+      <ul>
+        {% for b in e.bullets %}
+          <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+
+<section class="resume-section">
+  <h2>Education</h2>
+  {% for ed in site.data.resume.education %}
+    <div class="card">
+      <h3 class="card-title">{{ ed.degree }} — {{ ed.school }} <small>{{ ed.date }}</small></h3>
+      <ul>
+        {% for b in ed.bullets %}
+          <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+
+<section class="resume-section">
+  <h2>Leadership</h2>
+  {% for l in site.data.resume.leadership %}
+    <div class="card">
+      <h3 class="card-title">{{ l.title }} — {{ e.org }} <small>{{ e.date }}</small></h3>
+      <ul>
+        {% for b in l.bullets %}
+          <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+
+<section class="resume-section">
+  <h2>Skills</h2>
+  <div class="card">
+    {% for s in site.data.resume.skills %}
+        <p><strong>{{ s.title }}</strong>: {{ s.skills | join: ", " }}</p>
+    {% endfor %}
+  </div>
+</section>
