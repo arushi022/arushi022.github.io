@@ -169,6 +169,153 @@ a.favorites-grid .favorite-item:hover {
   color: var(--global-theme-color);
 }
 
+// Resume - plain section aesthetic
+
+// Grid layout
+.resume-grid {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+// Section headings: larger, colored, and spaced
+.resume-section > h2 {
+  font-size: 1.5rem;
+  color: var(--global-theme-color);
+  margin: 0 0 0.6rem 0;
+  font-weight: 700;
+  // letter-spacing: 0.01em;
+}
+
+// Subttiles (degree/title lines)
+.ri-title, .ed-degree {
+  font-size: 1rem;
+  color: var(--global-text-color);
+  margin: 0;
+  font-weight: 600;
+}
+.ri-org, .ed-school {
+  color: var(--global-muted-color);
+  font-weight: 400;
+  margin-left: 0.35rem;
+  font-size: 0.95rem;
+}
+
+// Resume header row: title/org on left, date on right
+.ri-header, .ed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+// Keep left content flexible
+.ri-left, .ed-left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+// Ensure date doesn't wrap and stays to the right
+.ri-right, .ed-right {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  margin-left: 0.75rem;
+}
+
+// School larger
+.ed-school {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--global-text-color);
+}
+
+// Degree smaller and muted
+.ed-degree {
+  font-size: 0.92rem;
+  color: var(--global-muted-color);
+  margin-top: 0.15rem;
+  font-weight: 500;
+}
+
+// Dates 
+.ri-date, .ed-date {
+  font-size: 0.92rem;
+  color: var(--global-muted-color);
+  font-weight: 500;
+}
+
+// Fall back for very small screens
+@media (max-width: 600px) {
+  .ri-header, .ed-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ri-right, .ed-right {
+    margin-left: 0;
+    margin-top: 0.35rem;
+  }
+}
+
+// Remove any card shadows/borders if card exist elsewhere
+.resume-item, .resume-education {
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+// Bullets spacing and readable line-length
+.ri-bullets, .ed-details {
+  margin: 0.5rem 0 0 1.05rem;
+  padding: 0;
+  color: var(--global-text-color);
+  line-height: 1.45;
+}
+.ri-bullets li, .ed-details li {
+  margin-bottom: 0.45rem;
+}
+
+// Skills compact style
+.skills-compact p {
+  margin: 0 0 0.5rem 0;
+  color: var(--global-text-color);
+}
+.skill-title {
+  color: var(--global-link-hover-color);
+  margin-right: 0.35rem;
+  font-weight: 700;
+}
+
+// Small visual separators between sections 
+.resume-section + .resume-section {
+  margin-top: 1.25rem;
+}
+
+// Make sure aside stacks nicely on mobile
+.resume-side {
+  width: 100%;
+}
+
+// Small gap after each experience / leadership item
+.resume-main .resume-item {
+  margin-bottom: 1rem;
+}
+
+// Avoid extra gap after the last item in a section
+.resume-section .resume-item:last-child {
+  margin-bottom: 0;
+}
+
+// Thin divider used between resume sections
+hr.resume-divider {
+  border: 0;
+  border-top: 1px solid var(--global-divider-color);
+  margin: 2.0rem 0;
+  opacity: 0.95;
+}
+
+
 // Profile
 
 .profile {

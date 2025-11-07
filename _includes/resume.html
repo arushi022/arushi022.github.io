@@ -1,50 +1,90 @@
-<section class="resume-section">
-  <h2>Experience</h2>
-  {% for e in site.data.resume.experience %}
-    <div class="card">
-      <h3 class="card-title">{{ e.title }} — {{ e.org }} <small>{{ e.date }}</small></h3>
-      <ul>
-        {% for b in e.bullets %}
-          <li>{{ b }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endfor %}
-</section>
+<div class="resume-wrapper">
+    <div class="resume-grid">
+        <main class="resume-main">
 
-<section class="resume-section">
-  <h2>Education</h2>
-  {% for ed in site.data.resume.education %}
-    <div class="card">
-      <h3 class="card-title">{{ ed.degree }} — {{ ed.school }} <small>{{ ed.date }}</small></h3>
-      <ul>
-        {% for b in ed.bullets %}
-          <li>{{ b }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endfor %}
-</section>
+            <!-- Experience -->
+            <section class="resume-section" id="experience">
+                <h2>Experience</h2>
+                {% for e in site.data.resume.experience %}
+                <article class="resume-item">
+                    <header class="ri-header">
+                        <div class="ri-left">
+                            <h3 class="ri-title">{{ e.title }} | {{ e.org }}</h3>
+                        </div>
+                        <div class="ri-right">
+                            <span class="ri-date">{{ e.date }}</span>
+                        </div>
+                    </header>
+                    <ul class="ri-bullets">
+                        {% for b in e.bullets %}
+                        <li>{{ b }}</li>
+                        {% endfor %}
+                    </ul>
+                </article>
+                {% endfor %}
+            </section>
 
-<section class="resume-section">
-  <h2>Leadership</h2>
-  {% for l in site.data.resume.leadership %}
-    <div class="card">
-      <h3 class="card-title">{{ l.title }} — {{ e.org }} <small>{{ e.date }}</small></h3>
-      <ul>
-        {% for b in l.bullets %}
-          <li>{{ b }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endfor %}
-</section>
+            <hr class="resume-divider" />
 
-<section class="resume-section">
-  <h2>Skills</h2>
-  <div class="card">
-    {% for s in site.data.resume.skills %}
-        <p><strong>{{ s.title }}</strong>: {{ s.skills | join: ", " }}</p>
-    {% endfor %}
-  </div>
-</section>
+            <!-- Education -->
+            <section class="resume-section" id="education">
+                <h2>Education</h2>
+                {% for ed in site.data.resume.education %}
+                <div class="resume-education">
+                    <header class="ed-header">
+                        <div class="ed-left">
+                            <h3 class="ed-school">{{ ed.school }}</h3>
+                            <h3 class="ed-degree">{{ ed.degree }}</h3>
+                        </div>
+                        <div class="ed-right">
+                            <span class="ed-date">{{ ed.dates }}</span>
+                        </div>
+                    </header>
+                    <ul class="ed-details">
+                        {% for d in ed.details %}
+                        <li>{{ d }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </section>
+
+            <hr class="resume-divider" />
+
+            <!-- Leadership -->
+            <section class="resume-section" id="leadership">
+                <h2>Leadership</h2>
+                {% for l in site.data.resume.leadership %}
+                <article class="resume-item">
+                    <header class="ri-header">
+                        <div class="ri-left">
+                            <h3 class="ri-title">{{ l.title }} | {{ l.org }}</h3>
+                        </div>
+                        <div class="ri-right">
+                            <span class="ri-date">{{ l.date }}</span>
+                        </div>
+                    </header>
+                    <ul class="ri-bullets">
+                        {% for b in l.bullets %}
+                        <li>{{ b }}</li>
+                        {% endfor %}
+                    </ul>
+                </article>
+                {% endfor %}
+            </section>
+
+            <hr class="resume-divider" />
+
+            <!-- Skills -->
+            <section class="resume-section" id="skills">
+                <h2>Skills</h2>
+                <div class="skills-compact">
+                    {% for s in site.data.resume.skills %}
+                    <p><strong class="skill-title">{{ s.title }}</strong>: {{ s.skills | join: ", " }}</p>
+                    {% endfor %}
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</div>
