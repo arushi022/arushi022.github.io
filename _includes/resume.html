@@ -9,7 +9,14 @@
                 <article class="resume-item">
                     <header class="ri-header">
                         <div class="ri-left">
-                            <h3 class="ri-title">{{ e.title }} | {{ e.org }}</h3>
+                             <h3 class="ri-title">{% include accent_text.html text=e.title %}
+                                <span class="sep" aria-hidden="true">|</span>
+                                {% if e.url %}
+                                    <span class="ri-org"><a class="resume-link" href="{{ e.url }}" target="_blank" rel="noopener noreferrer">{% include accent_text.html text=e.org %}</a></span>
+                                {% else %}
+                                    <span class="ri-org">{% include accent_text.html text=e.org %}</span>
+                                {% endif %} 
+                             </h3>
                         </div>
                         <div class="ri-right">
                             <span class="ri-date">{{ e.date }}</span>
@@ -17,7 +24,7 @@
                     </header>
                     <ul class="ri-bullets">
                         {% for b in e.bullets %}
-                        <li>{{ b }}</li>
+                        <li>{% include accent_text.html text=b %}</li>
                         {% endfor %}
                     </ul>
                 </article>
@@ -33,7 +40,13 @@
                 <div class="resume-education">
                     <header class="ed-header">
                         <div class="ed-left">
-                            <h3 class="ed-school">{{ ed.school }}</h3>
+                            <h3 class="ed-school">
+                                {% if ed.url %}
+                                <a class="resume-link" href="{{ ed.url }}" target="_blank" rel="noopener noreferrer">{{ ed.school }}</a>
+                                {% else %}
+                                {{ ed.school }}
+                                {% endif %}
+                            </h3>
                             <h3 class="ed-degree">{{ ed.degree }}</h3>
                         </div>
                         <div class="ed-right">
@@ -58,7 +71,14 @@
                 <article class="resume-item">
                     <header class="ri-header">
                         <div class="ri-left">
-                            <h3 class="ri-title">{{ l.title }} | {{ l.org }}</h3>
+                            <h3 class="ri-title">{% include accent_text.html text=l.title %}
+                                <span class="sep" aria-hidden="true">|</span>
+                                {% if l.url %}
+                                    <span class="ri-org"><a class="resume-link" href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{% include accent_text.html text=l.org %}</a></span>
+                                {% else %}
+                                    <span class="ri-org">{% include accent_text.html text=l.org %}</span>
+                                {% endif %}
+                            </h3>
                         </div>
                         <div class="ri-right">
                             <span class="ri-date">{{ l.date }}</span>
@@ -66,7 +86,7 @@
                     </header>
                     <ul class="ri-bullets">
                         {% for b in l.bullets %}
-                        <li>{{ b }}</li>
+                        <li>{% include accent_text.html text=b %}</li>
                         {% endfor %}
                     </ul>
                 </article>
@@ -78,9 +98,17 @@
             <!-- Skills -->
             <section class="resume-section" id="skills">
                 <h2>Skills</h2>
-                <div class="skills-compact">
+                <div class="skills-favs">
                     {% for s in site.data.resume.skills %}
-                    <p><strong class="skill-title">{{ s.title }}</strong>: {{ s.skills | join: ", " }}</p>
+                    <section class="skill-category">
+                        <h3 class="skill-category-title">{{ s.title }}</h3>
+                        <div class="skill-badges">
+                            {% for sk in s.skills %}
+                            <span class="skill-badge">{{ sk }}</span>
+                            {% endfor %}
+                        </div>
+                    </section>
+                    <!-- <p><strong class="skill-title">{{ s.title }}</strong>: {{ s.skills | join: ", " }}</p> -->
                     {% endfor %}
                 </div>
             </section>

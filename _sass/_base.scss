@@ -60,7 +60,7 @@ blockquote {
   font-size: 1.2rem;
 }
 
-// Current favorites
+// *********************** Current Favorites ***************************************
 .current {
   margin-top: 20px;
   padding-top: 40px;
@@ -169,7 +169,7 @@ a.favorites-grid .favorite-item:hover {
   color: var(--global-theme-color);
 }
 
-// Resume - plain section aesthetic
+// *********************** Resume ***************************************
 
 // Grid layout
 .resume-grid {
@@ -184,21 +184,47 @@ a.favorites-grid .favorite-item:hover {
   color: var(--global-theme-color);
   margin: 0 0 0.6rem 0;
   font-weight: 700;
-  // letter-spacing: 0.01em;
+  display: inline-block;
+  transition: transform 0.22s ease, color 180ms ease;
+  will-change: transform, color;
+}
+
+// Term accent
+.term-accent {
+  color: var(--global-theme-color);
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+// Subtle hover for section headings
+.resume-section > h2:hover,
+.resume-section > h2:focus {
+  transform: translateY(-2px);
+  color: var(--global-link-hover-color);
+  outline: none;
+  cursor: default;
 }
 
 // Subttiles (degree/title lines)
-.ri-title, .ed-degree {
-  font-size: 1rem;
-  color: var(--global-text-color);
-  margin: 0;
-  font-weight: 600;
-}
-.ri-org, .ed-school {
+.ri-org {
   color: var(--global-muted-color);
-  font-weight: 400;
+  font-weight: 700;
   margin-left: 0.35rem;
   font-size: 0.95rem;
+}
+
+// Separator spacing 
+.resume-main .sep {
+  display: inline-block;
+  margin: 0 0rem;
+  color: var(--global-muted-color);
+  vertical-align: baseline;
+  line-height: inherit;
+}
+.resume-main .ri-org {
+  margin-left: 0;
+  display: inline;
 }
 
 // Resume header row: title/org on left, date on right
@@ -211,7 +237,7 @@ a.favorites-grid .favorite-item:hover {
 
 // Keep left content flexible
 .ri-left, .ed-left {
-  flex: 1 1 auto;
+  // flex: 1 1 auto;
   min-width: 0;
 }
 
@@ -222,20 +248,21 @@ a.favorites-grid .favorite-item:hover {
   margin-left: 0.75rem;
 }
 
+// Degree smaller and muted
+.ed-degree {
+  font-size: 1rem;
+  color: var(--global-text-color);
+  margin-top: 0.30rem;
+  font-weight: 500;
+}
+
 // School larger
 .ed-school {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 700;
   margin: 0;
   color: var(--global-text-color);
-}
-
-// Degree smaller and muted
-.ed-degree {
-  font-size: 0.92rem;
-  color: var(--global-muted-color);
-  margin-top: 0.15rem;
-  font-weight: 500;
+  line-height: 1.15;
 }
 
 // Dates 
@@ -245,24 +272,17 @@ a.favorites-grid .favorite-item:hover {
   font-weight: 500;
 }
 
-// Fall back for very small screens
-@media (max-width: 600px) {
-  .ri-header, .ed-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .ri-right, .ed-right {
-    margin-left: 0;
-    margin-top: 0.35rem;
-  }
-}
-
 // Remove any card shadows/borders if card exist elsewhere
 .resume-item, .resume-education {
   padding: 0;
   background: transparent;
   border: none;
   box-shadow: none;
+  margin-bottom: 1rem;
+}
+// Avoid extra gap after the last item in a section
+.resume-section .resume-item:last-child {
+  margin-bottom: 0;
 }
 
 // Bullets spacing and readable line-length
@@ -277,14 +297,45 @@ a.favorites-grid .favorite-item:hover {
 }
 
 // Skills compact style
-.skills-compact p {
-  margin: 0 0 0.5rem 0;
-  color: var(--global-text-color);
-}
 .skill-title {
   color: var(--global-link-hover-color);
   margin-right: 0.35rem;
   font-weight: 700;
+}
+.skill-favs {
+  margin-top: 0.6rem;
+}
+.skill-category {
+  margin-bottom: 1rem;
+}
+.skill-category-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--global-theme-color);
+  margin: 0 0 0.4rem 0;
+}
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.skill-badge {
+  display: inline-block;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--global-text-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  transition: transform 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+.skill-badge:hover,
+.skill-badge:focus {
+  transform: translateY(-2px);
+  border-color: var(--global-link-hover-color);
+  color: var(--global-text-color);
+  outline: none;
 }
 
 // Small visual separators between sections 
@@ -297,26 +348,79 @@ a.favorites-grid .favorite-item:hover {
   width: 100%;
 }
 
-// Small gap after each experience / leadership item
-.resume-main .resume-item {
-  margin-bottom: 1rem;
+// Make company/school name stand out
+.resume-main .ri-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+  margin: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  line-height: 1.2;
 }
 
-// Avoid extra gap after the last item in a section
-.resume-section .resume-item:last-child {
-  margin-bottom: 0;
+// Resume links
+.resume-main .resume-link,
+.resume-side .resume-link,
+.resume-wrapper .resume-link {
+  color: var(--global-link-hover-color);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.resume-main .ri-org .resume-link,
+.resume-main .ed-school .resume-link,
+.resume-side .ri-org .resume-link,
+.resume-side .ed-school .resume-link {
+  font-weight: inherit;
+  line-height: inherit;
+  font-size: inherit;
+}
+.resume-main .resume-link:hover,
+.resume-side .resume-link:hover,
+.resume-wrapper .resume-link:hover,
+.resume-main .resume-link:focus,
+.resume-side .resume-link:focus,
+.resume-wrapper .resume-link:focus {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+  outline: none;
 }
 
 // Thin divider used between resume sections
 hr.resume-divider {
   border: 0;
-  border-top: 1px solid var(--global-divider-color);
+  border-top: 2px solid var(--global-divider-color);
   margin: 2.0rem 0;
   opacity: 0.95;
 }
 
+// Fall back for very small screens
+@media (max-width: 600px) {
+  .ri-header, .ed-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ri-right, .ed-right {
+    margin-top: 0.35rem;
+  }
+  .resume-main .ri-title .ri-org {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.28rem;
+    font-size: 1.02rem;
+    white-space: normal;
+  }
+  .skill-badges {
+    gap: 0.4rem;
+  }
+  .skill-badge {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.92rem;
+  }
+}
 
-// Profile
+
+// *********************** Profile ***************************************
 
 .profile {
   width: 100%;
@@ -372,7 +476,7 @@ hr.resume-divider {
 }
 
 
-// Navbar customization
+// *********************** Navbar customizations ************************************
 
 .navbar-brand.title,
 .post-title {
@@ -561,7 +665,7 @@ hr.resume-divider {
 }
 
 
-// Footer
+// *********************** Footer ***************************************
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
@@ -586,8 +690,7 @@ footer.sticky-bottom {
   font-size: 0.9rem;
 }
 
-// CV
-
+// *********************** CV ***************************************
 .cv {
   margin-bottom: 40px;
   
@@ -606,16 +709,14 @@ footer.sticky-bottom {
   }
 }
 
-// Repositories
-
+// *********************** Repositories ***************************************
 @media (min-width: 768px) {
   .repo {
     max-width: 50%;
   }
 }
 
-// Blog
-
+// *********************** Blog ***************************************
 .header-bar {
   border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
@@ -694,8 +795,7 @@ footer.sticky-bottom {
 }
 
 
-// Distill
-
+// *********************** Distill ***************************************
 .distill {
   a:hover {
     border-bottom-color: var(--global-theme-color);
@@ -704,8 +804,7 @@ footer.sticky-bottom {
 }
 
 
-// Projects
-
+// *********************** Projects ***************************************
 .projects {
   a {
     text-decoration: none;
@@ -749,8 +848,7 @@ footer.sticky-bottom {
 }
 
 
-// Publications
-
+// *********************** Publications ***************************************
 .publications {
   margin-top: 2rem;
   h1 {

@@ -1,28 +1,29 @@
 experience:
   - title: "Trading Analyst"
     org: "LMCG Investments"
+    url: "https://lmcg.com/alternative-investments/"
     date: "July 2024 - Present"
     bullets:
-      - "Optimized fixed income and multi-asset trade execution workflows using Python and SQL across datasets exceeding 100M records, enhancing strategy performance and alpha generation by 30%"
-      - "Built and maintained automated investment data pipelines to monitor credit and bond exposures across mulit-asset portfolios, improving strategy responsiveness to spread and rate signals"
-      - "Developed Python-based macroeconomic models analyzing 10+ indicators like inflation and GDP to support weekly scenario analysis and guide top-down credit and fixed income portfolio positioning"
+      - "Optimized fixed income and multi-asset trade execution workflows using Python and SQL across 100M+ record datasets, enhancing strategy performance and alpha generation by 30%"
+      - "Built automated investment data pipelines monitoring credit and bond exposures, improving strategy responsiveness to spread and rate signals"
       - "Contribute to strategic discussions for a $5bn fund as part of the 7-person investment team, integrating quantitative and credit risk insights into portfolio construction"
   - title: "Financial Engineering Summer Analyst"
     org: "BlackRock"
+    url: "https://www.blackrock.com/us/individual"
     date: "June 2023 - August 2023"
     bullets:
-      - "Stress-tested a new risk analytics server to strengthen monitoring of risk in multi-asset portfolios using Python statistical models, contributing to department-wide adoption and enhanced portfolio risk monitoring"
-      - "Enhanced portfolio performance reporting by developing a general-purpose toolkit using the Tableau API, Python libraries, and complex SQL queries, streamlining relative benchmarking and portfolio monitoring workflows"
-      - "Researched analytical methods to assess performance relative to broad benchmarks for systematic high-income strategies"
+      - "Stress-tested a new risk analytics server using Python statistical models, contributing to department-wide adoption and enhanced multi-asset portfolio risk monitoring"
+      - "Developed portfolio performance toolkit using the Tableau API, Python, and SQL, streamlining benchmarking and monitoring workflows"
   - title: "Data Science Intern"
     org: "Fidelity Investments"
+    url: "https://www.fidelity.com/"
     date: "June 2022 - August 2022"
     bullets:
-      - "Built machine learning models using PCA and K-Means Clustering in Python and SQL to detect anomalies in fixed income datasets with 80% precision, enabling early identification of bond mispricings and credit risk signals"
-      - "Automated data cleaning and transformation pipelines to enhance bond pricing and spread accuracy, accelerating integration into credit portfolio analytics workflows"
-      - "Partnered with portfolio managers and research analysts to refine anomaly detection outputs and strengthen fixed income screening processes for improved credit risk monitoring"
+      - "Built machine learning models using PCA and K-Means Clustering to detect bond pricing anomalies with 80% precision, enabling early identification of mispricings and credit risk signals"
+      - "Automated data pipelines enhancing bond pricing accuracy and accelerating integration into credit portfolio analytics"
   - title: "Teaching Assistant"
     org: "University of Pennsylvania"
+    url: "https://catalog.upenn.edu/courses/nets/"
     date: "January 2022 - May 2024"
     bullets:
       - "Taught core CS concepts including algorithmic complexity and data structures, held office hours, and graded weekly homeworks and exams for over 200 students"
@@ -30,22 +31,23 @@ experience:
 education:
   - degree: "B.S.E. in Computer Science, Minor in Economics & Data Science"
     school: "University of Pennsylvania"
+    url: "https://www.seas.upenn.edu/"
     dates: "September 2020 - May 2024"
     details:
       - "Grace Hopper Conference Scholarship, Benjamin Franklin Scholar"
-      - "Relevant Coursework: Corporate Finance, Macro-Modeling Economics, Microeconomics, Macroeconomics, Labor and Managerial Economics, Statistics and Probability for Data Science, Advanced Discrete Mathematics, Mathematical Fundamentals of Linear Algebra and Optimization, Big Data Analytics, Machine Learning and AI"
-      - "ACT: 36/36"
+      - "Relevant Coursework: Corporate Finance, Statistics and Probability for Data Science, Machine Learning and AI, Mathematical Fundamentals of Linear Algebra and Optimization, Big Data Analytics, Macro-Modeling Economics"
 
 leadership:
   - title: "Board & Project Member"
     org: "Women in CS"
+    url: "https://wics.cis.upenn.edu/"
     date: "September 2020 - May 2024"
     bullets:
       - "Organized an annual all-woman hackathon with 250+ attendees, fostering innovation and technical education in the Philadelphia tech community"
-      - "Built predictive analytics models using Python simulating investment signal extraction from large datasets to forecast content engagement trends in TED talks"
-      - "Applied NLP techniques to analyze over 100,000 COVID-related tweets to extract macroeconomic sentiment trends, analogous to credit and macro research applications"
+      - "Built predictive analytics models using Python to forecast content engagement trends in TED talks and applied NLP techniques to analyze 100,000+ COVID-related tweets for sentiment trends"
   - title: "Webmaster"
     org: "Upenn Theta Tau"
+    url: "https://www.upennthetatau.com/"
     date: "September 2020 - May 2024"
     bullets:
       - "Designed and maintained website analytics dashboards and blogs for 100+ users, improving engagement and accessibility"

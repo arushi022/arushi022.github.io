@@ -1,0 +1,23 @@
+{%- comment -%}
+Include: accent_text.html
+Usage: {% include accent_text.html text=variable %}
+Takes the provided text and replaces occurrences of words in site.data.accent_words
+with a <span class="term-accent">...</span> wrapper.
+{%- endcomment -%}
+
+{%- capture _src -%}{{ include.text | default: '' }}{%- endcapture -%}
+{%- assign _out = _src -%}
+
+{%- for word in site.data.accent_words -%}
+  {%- assign w = word | strip -%}
+  {%- if w != '' -%}
+    {%- capture _wrap -%}<span class="term-accent">{{ w }}</span>{%- endcapture -%}
+    {%- assign _out = _out | replace: w, _wrap -%}
+    {%- comment -%}
+      If you need punctuation variants (e.g., "Python," "Python."), add them
+      to the data file or add explicit replace lines here for , . ( ) etc.
+    {%- endcomment -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{{ _out }}
