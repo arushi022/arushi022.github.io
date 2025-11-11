@@ -12,4 +12,4 @@ Hi, I'm Arushi! I currently work as a Trading Analyst at [LMCG Investments](http
 
 I am a 2024 graduate from the University of Pennsylvania with a B.S.E in Computer Science and minors in Economics and Data Science. At Penn, I was a teaching assistant for an Intro CS course, wrote for the [Daily Pennsylvanian](https://www.thedp.com/page/search?q=Arushi+Srivastava#gsc.tab=0&gsc.q=Arushi%20Srivastava&gsc.page=1), and managed the website for [Theta Tau](https://www.upennthetatau.com/), Penn's engineering fraternity. 
 
-In my free time, I'm exploring the best cafes in NYC, on my yoga mat, or experimenting in the kitchen. I created this space to share my projects, thoughts on quantitative finance, and (hopefully) blog my various thoughts. Coffee recommendations always welcome at arushi.mail16@gmail.com.
+In my free time, I'm exploring the best cafes in NYC, on my yoga mat, or experimenting in the kitchen. I created this space to share my projects, thoughts on quantitative finance, and blog my various thoughts. Coffee recommendations always welcome at arushi.mail16@gmail.com.
