@@ -96,7 +96,7 @@ permalink: /about_me/
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Blog Notes # blog_name will be displayed in your blog page
+blog_name: Blog # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
 blog_description:
 permalink: /blog/:year/:title/
@@ -222,7 +222,7 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["agi", "brain", "gpt3", "jupyter notebook"] # this tags will be dispalyed on the front page of your blog
+display_tags: ["Blog #1", "Blog #2", "Blog #3", "Blog #4"] # this tags will be dispalyed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
