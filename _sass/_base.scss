@@ -663,6 +663,14 @@ hr.resume-divider {
     font-size: 0.8rem;
   }
 }
+// Capitalize each word in nav labels
+.header .nav a,
+.nav a,
+.nav-link,
+.navbar a,
+.site-nav a {
+  text-transform: capitalize;
+}
 
 
 // *********************** Footer ***************************************
