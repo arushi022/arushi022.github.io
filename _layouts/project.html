@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<!-- project.html -->
+<div class="project-detail-wrapper">
+    <div class="container">
+        <header class="project-header">
+            <h1 class="project-title">{{ page.title }}</h1>
+            {% if page.category %}
+            <div class="project-meta">
+                <span class="project-category">{{ page.category | capitalize }}</span>
+                {% if page.date %} • <time datetime="{{ page.date }}">{{ page.date | date: "%b %Y" }}</time>{% endif %}
+            </div>
+            {% endif %}
+        </header>
+        {% if page.img %}
+        <div class="project-hero">
+            {% include figure.html path=page.img alt=page.title %}
+        </div>
+        {% endif %}
+        <main class="project-content">
+            {{ content }}
+        </main>
+        <footer class="project-footer">
+            <div class="project-links">
+                {% if page.github %}
+                <a class="btn-link" href="{{ page.github }}" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View code
+                </a>
+                {% endif %}
+                {% if page.website %}
+                <a class="btn-link" href="{{ page.website }}" target="_blank" rel="noopener noreferrer">
+                    Visit site
+                </a>
+                {% endif %}
+            </div>
+            <p class="project-back">
+                <a href="{{ '/projects/' | relative_url}}">&larr; Back to projects</a>
+            </p>
+        </footer>
+    </div>
+</div>
