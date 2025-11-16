@@ -21,8 +21,6 @@ current_items:
   - title: "Listening to:"
     body: "Humans of Bombay Podcast"
     url: "https://open.spotify.com/show/5wHwtGp4PV0hcSBdLZP7V3?si=27a1eb2d6beb401e"
-  - title: "In the works:"
-    body: "Predicting the next big signal in the wellness markets"
   - title: "Cooking experiments:"
     body: "Mango rasmalai cake for Diwali"
     url: "https://www.instagram.com/arushi_bakes/"
