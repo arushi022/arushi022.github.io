@@ -732,7 +732,19 @@ footer.sticky-bottom {
   padding-bottom: 3rem;
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-size: 1.5rem;
+    margin: 0 0 0.6rem 0;
+    font-weight: 700;
+    display: inline-block;
+    transition: transform 0.22s ease, color 180ms ease;
+    will-change: transform, color;
+  }
+  h1:hover,
+  h1:focus {
+    transform: translateY(-2px);
+    color: var(--global-link-hover-color);
+    outline: none;
+    cursor: default;
   }
 }
 
