@@ -99,7 +99,7 @@ permalink: /about_me/
 blog_name: Blog # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
 blog_description:
-permalink: /blog/:year/:title/
+permalink: /blog/:title/
 
 # Pagination
 pagination:
@@ -218,11 +218,9 @@ jekyll-archives:
     tag: archive-tag
     category: archive-category
   permalinks:
-    # year: "/blog/:year/"
-    tag: "/blog/tag/:name/"
-    category: "/blog/category/:name/"
+    tag: "/blog/:name/"
 
-display_tags: ["Blog #1", "Blog #2", "Blog #3", "Blog #4"] # this tags will be dispalyed on the front page of your blog
+display_tags: ["Blog #1",] # this tags will be dispalyed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
