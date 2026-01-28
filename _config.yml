@@ -87,10 +87,9 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # About me
 # -----------------------------------------------------------------------------
 
-about_me_name: About me 
+about_me_name: About me
 about_me_nav_title: About me
 about_me_description:
-permalink: /about_me/
 
 # -----------------------------------------------------------------------------
 # Blog
