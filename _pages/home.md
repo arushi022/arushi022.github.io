@@ -16,8 +16,8 @@ social: true  # includes social icons at the bottom of the page
 
 current_items:
   - title: "Reading:"
-    body: "Saint Anything by Sarah Dessen"
-    url: "https://www.goodreads.com/book/show/23009402-saint-anything"
+    body: "Pachinko by Min Jin Lee"
+    url: "https://www.goodreads.com/book/show/34051011-pachinko"
   - title: "Listening to:"
     body: "Humans of Bombay Podcast"
     url: "https://open.spotify.com/show/5wHwtGp4PV0hcSBdLZP7V3?si=27a1eb2d6beb401e"
