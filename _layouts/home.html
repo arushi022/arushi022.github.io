@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+<div class="post">
+  <article>
+    <!-- Intro: photo + tagline -->
+    <div class="home-intro">
+      {%- if page.profile.image %}
+      {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+      <div class="home-photo">
+        {% include figure.html
+        path=profile_image_path
+        class="img-fluid z-depth-1 rounded"
+        alt=page.profile.image %}
+      </div>
+      {%- endif %}
+      <div class="home-tagline">
+        <h1 class="home-name">
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.last_name }}
+        </h1>
+        <p class="home-bio">{{ content }}</p>
+      </div>
+    </div>
+
+    <!-- Recent Writing -->
+    {% assign recent_posts = site.posts | sort: "date" | reverse %}
+    {% if recent_posts.size > 0 %}
+    <div class="home-section">
+      <h2>Recent Writing</h2>
+      <ul class="home-post-list">
+        {% for post in recent_posts limit:5 %}
+        {% if post.external_source == blank %}
+          {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
+        {% else %}
+          {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+        {% endif %}
+        <li>
+          <a class="home-post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <h3>{{ post.title }}</h3>
+            <p class="home-post-description">{{ post.description }}</p>
+            <span class="home-post-meta">{{ read_time }} min read &middot; {{ post.date | date: '%B %-d, %Y' }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% if recent_posts.size > 5 %}
+      <a class="home-see-all" href="{{ '/blog/' | relative_url }}">See all posts &rarr;</a>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Recent Projects -->
+    {% assign recent_projects = site.projects | sort: "date" | reverse %}
+    {% if recent_projects.size > 0 %}
+    <div class="home-section">
+      <h2>Recent Projects</h2>
+      <div class="home-projects-grid">
+        {% for project in recent_projects limit:4 %}
+        {% assign href = project.redirect | default: project.url | relative_url %}
+        <a class="home-project-card" href="{{ href }}">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Current Favorites -->
+    {% if page.current -%}
+    {%- include current.html %}
+    {%- endif %}
+
+    <!-- Social -->
+    {% if page.social %}
+    <div class="social" style="margin-top: 2rem;">
+      <div class="contact-icons">
+        {% include social.html starred_only=true detailed=false %}
+      </div>
+    </div>
+    {% endif %}
+  </article>
+</div>
